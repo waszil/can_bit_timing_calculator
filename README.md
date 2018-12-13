@@ -1,7 +1,7 @@
 # CAN_BitTimingCalculation
 ***Bit level timing calculator GUI for CAN/CANFD***
 
-![Screenshot](https://octodex.github.com/images/yaktocat.png)
+![Screenshot](https://github.com/waszil/CAN_BitTimingCalculation/blob/master/screenshot.png)
 
 **F_in**:
 given input clock frequency of the CAN protocol controller
