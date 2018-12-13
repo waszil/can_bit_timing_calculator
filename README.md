@@ -1,18 +1,18 @@
 # CAN_BitTimingCalculation
 Bit level timing calculator for CAN/CANFD
 
-## F_in:
+F_in:
 given input clock frequency of the CAN protocol controller
 ##Prescaler:
 scales down the input clock for the internal time base:
 
-## TimeQuantum = 1/F_in * Prescaler
+TimeQuantum = 1/F_in * Prescaler
 e.g.:
 F_in        = 80 MHz
 Prescaler   = 8
 TimeQuantum = 1/80000000*8 = 0.0000001 s = 100 ns
 
-## Bit Time:
+Bit Time:
 Each bit is divided into 4 segments:
 
 <---------------- T_bit ------------------->
@@ -36,15 +36,15 @@ TSEG2:  Time segment 2: usually this can be configured in a CAN controller
 SJW:    (Re)Synchronization Jump Width: The controller can lengthen TSEG1 or
         shorten TSEG2 by this value at resynchronization.
 
-## TimeQuanta/BitTime:
+TimeQuanta/BitTime:
 The number of TimeQuanta in a bit time:
     TQ/BT = SYNC + TSEG1 + TSEG2 = 1 + TSEG1 + TSEG2
 
-## SamplePoint:
+SamplePoint:
 Position of the sample point in the bit time in percentage:
     SP = (SYNC + TSEG1) / TQ/BT * 100 %
 
-## BaudRate:
+BaudRate:
 Comes from the TimeQuantum, and the TQ/BT
                      1
 BaudRate = ---------------------
