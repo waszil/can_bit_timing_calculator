@@ -1,5 +1,8 @@
-# CAN_BitTimingCalculation
+# CAN Bit Timing Calculator
+
 ***Bit level timing calculator GUI for CAN/CANFD***
+
+## Description
 
 ![Screenshot](https://github.com/waszil/CAN_BitTimingCalculation/blob/master/screenshot.png)
 
@@ -65,3 +68,17 @@ So with the wbove example and with TSEG1 = 15 and TSEG2 = 4:
     BaudRate = 1 / (20 * 100ns) = 500000 = 500 kbps
     SamplePoint = (1 + 15) / 20 * 100% = 80%
 
+
+## How to install (on Windows)
+In this folder, create a new virtual environment, activate it, and install the dependencies:
+  ```shell
+  > python -m venv venv
+  > .\vent\Script\activate
+  (venv) > python -m pip install -r requirements.txt
+  ```
+  
+## How to use
+Call the module from the virtual environment:
+```shell
+(venv) > python -m can_bit_timing_calculator
+```
